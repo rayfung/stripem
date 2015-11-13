@@ -349,7 +349,7 @@ namespace Stripem
 
         if (length > 0)
         {
-          StreamWriter writer = new StreamWriter(doc.FullName);
+          StreamWriter writer = new StreamWriter(doc.FullName, false, new UTF8Encoding(true));
           writer.Write(buffer, start, length);
           writer.Close();
         }
